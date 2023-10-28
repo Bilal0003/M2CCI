@@ -108,7 +108,9 @@ void Aff(vector<int> t){
     for (int i=0;i<t.size();i++){
         cout << t[i] << " ";
     }
+    cout << endl;
 }
+
 
 void VectorInit(vector<int> &t){
     for (int i=0;i<t.size();i++){
@@ -116,14 +118,25 @@ void VectorInit(vector<int> &t){
     }
 }
 
-vector<int> Compte(string a, vector<int> n){
-    VectorInit(n);
+vector<int> Compte(string a, int n){
+    vector<int> t;
+    t.resize(n);
+    VectorInit(t);
+    string letters = "abcdefghijklmnopqrstuxyz";
+    string LETTERS = "ABCDEFGHIJKLMNOPQRSTUXYZ";
+    for (int i=0; i< a.size(); i++){
+        for (int j=0; j<letters.size(); j++){
+            if(a[i]==letters[j] || a[i]==LETTERS[j]){
+                t[j] +=1;
+            }
+        }
+    }
+    return t;
 }
 
-
-
 int main(){ 
-    vector<int> n;
-    cout << Conversion("23582");
+    int dimension = 24;
+    string x = "Bonjour";
+    Aff(Compte(x,dimension));
     return 0;
 }
