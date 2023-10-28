@@ -1,0 +1,6 @@
+upload : git add .
+        git commit -m "blabla"
+        git push
+
+recievie : git fetch
+            git pull
