@@ -135,8 +135,7 @@ vector<int> Compte(string a, int n){
 }
 
 int main(){ 
-    int dimension = 24;
-    string x = "Bonjour";
-    Aff(Compte(x,dimension));
+    string x = "eluparcettecrapule";
+    cout << isPalindrome(x);
     return 0;
 }
