@@ -9,6 +9,7 @@ class rationnel{
         rationnel Add(rationnel);
         friend rationnel Soustracion(rationnel,rationnel);
         friend rationnel Multip(rationnel,rationnel);
+        void Inv();
 };
 
 
