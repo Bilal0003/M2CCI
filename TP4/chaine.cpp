@@ -79,9 +79,9 @@ int Comparer(string a, string b){
     
 }
 
-int power(int base, int exponent){
+int power(int base, int exposant){
     int power =1;
-    for (int i=0; i < exponent; i++){
+    for (int i=0; i < exposant; i++){
         power *= base;
     }
     return power;
@@ -135,7 +135,12 @@ vector<int> Compte(string a, int n){
 }
 
 int main(){ 
-    string x = "eluparcettecrapule";
-    cout << isPalindrome(x);
+    int foo [5] = { 16, 2, 77, 40, 12071 };
+    int *ptr=foo ; // *ptr = foo => ptr = &foo[0]
+    
+    for(int i=0; i<5; i++){
+        cout << &foo[i] << endl;
+    }
+    //cout << b[0] << endl ;
     return 0;
 }

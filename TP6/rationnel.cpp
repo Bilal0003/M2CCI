@@ -2,9 +2,9 @@
 
 using namespace std;
 
-rationnel::rationnel(){n=0, d=1;}
-
 rationnel::rationnel(int a,int b){n=a; d=b;}
+
+rationnel::rationnel(){n=0, d=1;}
 
 rationnel::rationnel(int a){n=a; d=1;}
 
@@ -28,3 +28,4 @@ rationnel Soustracion(rationnel a,rationnel b) { return rationnel(b.d*a.n-b.n*a.
 rationnel Multip(rationnel a,rationnel b){return rationnel(a.n*b.n, a.d*b.d);}
 
 void rationnel::Inv(){int c; c=n; n=d; d=c;}
+
