@@ -1,8 +1,15 @@
+def threeSum( nums: list[int]) -> list[list[int]]:
+        ans = []
 
-MyDict = {}
-MyDict['a'] = 7
-MyDict['b'] = 2
+        for i in range (len(nums)):
+            for j in range (len(nums)):
+                for k in range (len(nums)):
+                    if (nums[i] + nums[j] + nums[k] == 0 and i!=j and i!=k and j!=k):
+                        ans.append(sorted([nums[i],nums[j],nums[k]]))
 
-min_key = min(MyDict, key=lambda k: MyDict[k])
-strng = "awea"
-print(MyDict["b"])
+        
+        return ans
+
+nums=[0,0,0]       
+print(threeSum(nums))
+
