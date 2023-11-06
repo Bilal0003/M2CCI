@@ -9,4 +9,5 @@ class Movie{
 
     public:
         Movie(std::string, std::string , int);
+        void display();
 };

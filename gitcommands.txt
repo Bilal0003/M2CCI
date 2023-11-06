@@ -4,3 +4,8 @@ upload : git add .
 
 recievie : git fetch
             git pull
+
+
+git force pull and replace local changes:
+        git checkout
+        git reset --hard

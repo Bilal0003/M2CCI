@@ -1,7 +1,9 @@
 #include <iostream>
-#include "Movie.cpp"
+#include "Movies.cpp"
+using namespace std;
 
 int main(){
-    Movie("Ice Age", "PG 13", 1);
+    Movie movie("Ice age", "PG 13", 0);
+    movie.display();
     return 0;
 }
