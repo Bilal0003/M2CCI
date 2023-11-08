@@ -8,7 +8,9 @@ class Movies{
 
     public:
         Movies();
-        friend void Add_movie(Movies &, std::string, std::string, int);
-        void Display(Movies);
         
+        void Add_movie(std::string, std::string, int);
+        void Display();
+        void increment_watched(std::string);
+        ~Movies();
 };
