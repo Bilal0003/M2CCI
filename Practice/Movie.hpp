@@ -9,6 +9,7 @@ class Movie{
 
     public:
         Movie(std::string, std::string , int);
+        std::string get_name();
         void display();
         ~Movie();
 };

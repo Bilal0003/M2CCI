@@ -10,6 +10,7 @@ class rationnel{
         friend rationnel Soustracion(rationnel,rationnel);
         friend rationnel Multip(rationnel,rationnel);
         void Inv();
+        friend rationnel operator+ (const rationnel &, const rationnel &);
 };
 
 
