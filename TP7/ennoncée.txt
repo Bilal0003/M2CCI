@@ -1,0 +1,9 @@
+On utilisera un fichier .hpp pour déclarer les nouvelles classes et les déclarations de fonctions, un fichier .cpp pour le code du corps des fonctions. Le programme principal sera codé dans exe.cpp.
+La documentation devra être codée au format doxygen et générée à l'aide de la commande doxygen -g code.oxy pour générer le fichier de configuration, puis doxygen code.oxy pour générer la documentation.
+ Définir une classe Entier permettant de représenter de très grands nombres entiers sous leur forme décimale, à l'aide d'un tableau de chiffres codés sur des caractères (prendre par exemple 60 chiffres).
+ Ecrire un constrcteur définissant un grand Entier à partir d'un entier de type int.
+ Écrire une fonction permettant d'afficher ce nombre.
+ Ecrire une fonction qui additionne deux nombres de type Entier et une fonction de multiplication. Pour cette dernière, on écrira deux fonctions utilitaires permettant de multiplier un Entier par un nombre à un seul chiffre, et une fonction multipliant un Entier par une puissance de 10 (décalage).
+ Écrire une fonction permettant de calculer la factorielle d'un Entier passé en paramètre.
+ Tester les fonctions précédentes en calculant la factorielle de 27, le résultat doit être 10 888 869 450 418 352 160 768 000 000.
+ Veiller à ce que toutes les classes et fonctions soient documentées, et vérifier la génération de documentation.
