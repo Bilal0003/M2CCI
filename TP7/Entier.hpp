@@ -7,6 +7,7 @@ private:
     std::vector<int> chiffres;
 
 public:
+    Entier();
     Entier(std::string);
     void Afficher() const;
     friend Entier operator+ (const Entier &, const Entier &);
