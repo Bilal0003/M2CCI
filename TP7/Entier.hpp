@@ -7,7 +7,7 @@ private:
     std::vector<int> chiffres;
 
 public:
-    Entier(int);
+    Entier(std::string);
     void Afficher() const;
     
 };

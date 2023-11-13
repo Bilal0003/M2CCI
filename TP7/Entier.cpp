@@ -3,17 +3,26 @@
 
 using namespace std;
 
-//grandnombre = "10 888 869 450 418 352 160 768 000 000"
+// grandnombre = "10 888 869 450 418 352 160 768 000 000"
 
-Entier::Entier(int nombre) : chiffres(){
-    while (nombre != 0){
-        chiffres.push_back(nombre % 10);
-        nombre = nombre / 10;
+Entier::Entier(std::string nombre) : chiffres()
+{
+
+    for (int i = 0; i < nombre.size(); i++)
+    {
+        cout << nombre[i];
+        if (nombre[i] != ' ')
+        {
+            chiffres.push_back(nombre[i] - '0');
+        }
     }
-    if (chiffres.empty()) chiffres.push_back(0);
+
+    // if (chiffres.empty()) chiffres.push_back(0);
 }
 
-void Entier::Afficher() const {
-    
+void Entier::Afficher() const
+{
+    for (int i=0; i < chiffres.size(); i++){
+        cout << chiffres[i];
+    }
 }
-
