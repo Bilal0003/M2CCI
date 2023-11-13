@@ -9,5 +9,6 @@ private:
 public:
     Entier(std::string);
     void Afficher() const;
-    
+    friend Entier operator+ (const Entier &, const Entier &);
+    // implement addition, using principe dial i7tifad b ra9m 3acharat
 };

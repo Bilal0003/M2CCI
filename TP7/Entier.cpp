@@ -22,7 +22,26 @@ Entier::Entier(std::string nombre) : chiffres()
 
 void Entier::Afficher() const
 {
-    for (int i=0; i < chiffres.size(); i++){
+    for (int i = 0; i < chiffres.size(); i++)
+    {
         cout << chiffres[i];
+    }
+}
+
+Entier operator+(const Entier &a, const Entier &b)
+{
+    int reste = 0;
+    int LenNumSup = 0;
+    if (a.chiffres.size() > b.chiffres.size())
+    {
+        LenNumSup = a.chiffres.size() - 1;
+    }
+    else
+    {
+        LenNumSup = b.chiffres.size() - 1;
+    }
+    for (int i = LenNumSup ; i >= 0; i--)
+    {
+        
     }
 }
