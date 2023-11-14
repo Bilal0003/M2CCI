@@ -34,17 +34,18 @@ void Entier::Afficher() const
 Entier operator+(const Entier &a, const Entier &b)
 {
     Entier num;
-    int conti = 0;
+    int carry = 0;
     int i = a.chiffres.size() - 1;
     int j = b.chiffres.size() - 1;
-
+    int largest = (i>j)  ? i : j;
     while (i >= 0 && j >= 0){
-        num.chiffres.insert( num.chiffres.begin() ,  ((a.chiffres[i] + b.chiffres[j] + conti) % 10));
-        
-        conti = (a.chiffres[i] + b.chiffres[j]) / 10; // find way to no execute this when i or j  is 0
+        //num.chiffres.insert( num.chiffres.begin() ,  ((a.chiffres[i] + b.chiffres[j] + carry) % 10));
+        num.chiffres.push_back((a.chiffres[i] + b.chiffres[j] + carry) % 10);
+        carry = (a.chiffres[i] + b.chiffres[j]) / 10; // find way to no execute this when i or j  is 0
         //if( (i=0 && j ) || () )
-        j--;
         i--;
+        j--;
+        
     }
     return num;
 }

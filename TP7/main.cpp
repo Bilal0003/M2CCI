@@ -4,8 +4,8 @@ using namespace std;
 
 
 int main(){
-    string largenum1 = "12345";
-    string largenum2 = "504391";
+    string largenum1 = "615645";
+    string largenum2 =  "24566";
     
     Entier grdnbr1(largenum1);
     Entier grdnbr2(largenum2);
