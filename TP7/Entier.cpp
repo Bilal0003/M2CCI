@@ -38,14 +38,21 @@ Entier operator+(const Entier &a, const Entier &b)
     int i = a.chiffres.size() - 1;
     int j = b.chiffres.size() - 1;
     int largest = (i>j)  ? i : j;
+    int smallest = (i<j) ? i : j;
     while (i >= 0 && j >= 0){
-        //num.chiffres.insert( num.chiffres.begin() ,  ((a.chiffres[i] + b.chiffres[j] + carry) % 10));
-        num.chiffres.push_back((a.chiffres[i] + b.chiffres[j] + carry) % 10);
-        carry = (a.chiffres[i] + b.chiffres[j]) / 10; // find way to no execute this when i or j  is 0
-        //if( (i=0 && j ) || () )
+        num.chiffres.insert( num.chiffres.begin() ,  ((a.chiffres[i] + b.chiffres[j] + carry) % 10));
+        //num.chiffres.push_back((a.chiffres[i] + b.chiffres[j] + carry) % 10);
+        carry = (a.chiffres[i] + b.chiffres[j]) / 10; 
+        /* if (i==0 || j==0) {
+            num.chiffres.insert(num.chiffres.begin(), b.chiffres[largest]);
+            largest--; */
+        
         i--;
         j--;
         
+    }
+    for (int k=largest-smallest-1; k>=0; k--){
+    num.chiffres.insert(num.chiffres.begin(),a.chiffres[k]+carry);
     }
     return num;
 }
