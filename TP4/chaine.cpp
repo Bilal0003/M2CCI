@@ -135,12 +135,6 @@ vector<int> Compte(string a, int n){
 }
 
 int main(){ 
-    int foo [5] = { 16, 2, 77, 40, 12071 };
-    int *ptr=foo ; // *ptr = foo => ptr = &foo[0]
-    
-    for(int i=0; i<5; i++){
-        cout << &foo[i] << endl;
-    }
-    //cout << b[0] << endl ;
+    cout << '5' - '0';
     return 0;
 }

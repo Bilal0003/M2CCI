@@ -15,6 +15,5 @@ int main(){
     ans.Afficher();
     //cout << endl << 8%9 << endl << 8/9;
 
-
     return 0;
 }
