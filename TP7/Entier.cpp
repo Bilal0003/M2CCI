@@ -56,7 +56,17 @@ Entier operator+(const Entier &a, const Entier &b)
     return num;
 } 
  
-/* Entier operator*(const Entier &a, const Entier &b){
+Entier operator*(const Entier &a, const Entier &b){
+
+int power(int base, int exposant)
+{
+    int power = 1;
+    for (int i = 0; i < exposant; i++)
+    {
+        power *= base;
+    }
+    return power;
+}
 
     Entier mult1Chiffre(Entier num, int n){
         int carry = 0;
@@ -67,23 +77,10 @@ Entier operator+(const Entier &a, const Entier &b)
         produit = (a.chiffres[i] * n ) + carry;
         num.chiffres.insert(num.chiffres.begin(), produit % 10);
     }
-       
+    Entier multParDix(Entier num, int n){
+        
+    }
     }
 
-} */
-
-Entier Entier::mult1Chiffre(Entier a, int n)
-{   Entier num;
-    int carry = 0;
-    int produit = 1;
-    int i = a.chiffres.size();
-    while (i >= 0)
-    {
-        int chiffre_a = (i >= 0) ? a.chiffres[i] : 0;
-
-        produit = (a.chiffres[i] * n) + carry;
-        num.chiffres.insert(num.chiffres.begin(), produit % 10);
-        i--;
-    }
-    return num;
 }
+
