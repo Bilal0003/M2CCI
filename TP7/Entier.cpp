@@ -59,35 +59,3 @@ Entier operator+(const Entier &a, const Entier &b)
 
 
 
-/* Entier operator+(const Entier &a, const Entier &b) {
-    Entier num;
-    int carry = 0;
-    int i = a.chiffres.size() - 1;
-    int j = b.chiffres.size() - 1;
-
-    // Iterate over digits from right to left
-    while (i >= 0 || j >= 0) {
-        int digit_a = (i >= 0) ? a.chiffres[i] : 0;
-        int digit_b = (j >= 0) ? b.chiffres[j] : 0;
-
-        // Perform addition on the current digits and the carry
-        int sum = digit_a + digit_b + carry;
-
-        // Update carry for the next iteration
-        carry = sum / 10;
-
-        // Insert the current digit into the result
-        num.chiffres.insert(num.chiffres.begin(), sum % 10);
-
-        // Move to the next digits
-        i--;
-        j--;
-    }
-
-    // If there is a carry left, insert it as the most significant digit
-    if (carry != 0) {
-        num.chiffres.insert(num.chiffres.begin(), carry);
-    }
-
-    return num;
-} */
