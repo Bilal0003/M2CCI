@@ -37,22 +37,57 @@ Entier operator+(const Entier &a, const Entier &b)
     int carry = 0;
     int i = a.chiffres.size() - 1;
     int j = b.chiffres.size() - 1;
-    int largest = (i>j)  ? i : j;
-    int smallest = (i<j) ? i : j;
-    while (i >= 0 && j >= 0){
-        num.chiffres.insert( num.chiffres.begin() ,  ((a.chiffres[i] + b.chiffres[j] + carry) % 10));
-        //num.chiffres.push_back((a.chiffres[i] + b.chiffres[j] + carry) % 10);
-        carry = (a.chiffres[i] + b.chiffres[j]) / 10; 
-        /* if (i==0 || j==0) {
-            num.chiffres.insert(num.chiffres.begin(), b.chiffres[largest]);
-            largest--; */
+    int sum =0;
+    while (i >= 0 || j >= 0){
+        int chiffre_a = (i>=0) ? a.chiffres[i] : 0;
+        int chiffre_b = (j>=0) ? b.chiffres[j] : 0;
+
+        sum = chiffre_a + chiffre_b + carry;
+        carry = sum / 10; 
+
+        num.chiffres.insert(num.chiffres.begin(),  sum % 10);
         
         i--;
         j--;
-        
-    }
-    for (int k=largest-smallest-1; k>=0; k--){
-    num.chiffres.insert(num.chiffres.begin(),a.chiffres[k]+carry);
-    }
+         
+    } 
+
+    if (carry !=0) num.chiffres.insert(num.chiffres.begin(),carry);
     return num;
-}
+} 
+ 
+
+
+
+/* Entier operator+(const Entier &a, const Entier &b) {
+    Entier num;
+    int carry = 0;
+    int i = a.chiffres.size() - 1;
+    int j = b.chiffres.size() - 1;
+
+    // Iterate over digits from right to left
+    while (i >= 0 || j >= 0) {
+        int digit_a = (i >= 0) ? a.chiffres[i] : 0;
+        int digit_b = (j >= 0) ? b.chiffres[j] : 0;
+
+        // Perform addition on the current digits and the carry
+        int sum = digit_a + digit_b + carry;
+
+        // Update carry for the next iteration
+        carry = sum / 10;
+
+        // Insert the current digit into the result
+        num.chiffres.insert(num.chiffres.begin(), sum % 10);
+
+        // Move to the next digits
+        i--;
+        j--;
+    }
+
+    // If there is a carry left, insert it as the most significant digit
+    if (carry != 0) {
+        num.chiffres.insert(num.chiffres.begin(), carry);
+    }
+
+    return num;
+} */
