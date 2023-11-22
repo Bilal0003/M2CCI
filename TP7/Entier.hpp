@@ -9,9 +9,11 @@ private:
 public:
     Entier();
     Entier(std::string);
-    Entier(int);
+    //Entier(int);
     void Afficher() const;
     friend Entier operator+ (const Entier &, const Entier &);
-    Entier mult1Chiffre(Entier,int);
-    // implement addition, using principe dial i7tifad b ra9m 3acharat
+    friend Entier operator* (const Entier &, const Entier &);
+    friend Entier mult1Chiffre( Entier,int);
+    friend Entier mult10(Entier,int);
+    Entier factoriel();
 };

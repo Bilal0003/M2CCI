@@ -3,13 +3,16 @@
 
 using namespace std;
 
-int main(){
-    string largenum1 = "232";
-    string test= "";
-    Entier nbr(largenum1);
-    int x=5;
-    nbr.mult1Chiffre(test,x);
-    nbr.Afficher();
 
+
+
+int main(){
+    string lrg1 = "6";
+    string lrg2 =  "2";
+    Entier grd1(lrg1);
+    Entier grd2(lrg2);
+
+    grd1.factoriel();
+    grd1.Afficher();
     return 0;
 }

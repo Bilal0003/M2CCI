@@ -20,7 +20,7 @@ Entier::Entier(std::string nombre) : chiffres()
     // if (chiffres.empty()) chiffres.push_back(0);
 }
 
-Entier::Entier():chiffres(){}
+Entier::Entier() : chiffres() {}
 
 void Entier::Afficher() const
 {
@@ -37,50 +37,89 @@ Entier operator+(const Entier &a, const Entier &b)
     int carry = 0;
     int i = a.chiffres.size() - 1;
     int j = b.chiffres.size() - 1;
-    int sum =0;
-    while (i >= 0 || j >= 0){
-        int chiffre_a = (i>=0) ? a.chiffres[i] : 0;
-        int chiffre_b = (j>=0) ? b.chiffres[j] : 0;
+    int sum = 0;
+    while (i >= 0 || j >= 0)
+    {
+        int chiffre_a = (i >= 0) ? a.chiffres[i] : 0;
+        int chiffre_b = (j >= 0) ? b.chiffres[j] : 0;
 
         sum = chiffre_a + chiffre_b + carry;
-        carry = sum / 10; 
+        carry = sum / 10;
 
-        num.chiffres.insert(num.chiffres.begin(),  sum % 10);
-        
+        num.chiffres.insert(num.chiffres.begin(), sum % 10);
+
         i--;
         j--;
-         
-    } 
+    }
 
-    if (carry !=0) num.chiffres.insert(num.chiffres.begin(),carry);
+    if (carry != 0)
+        num.chiffres.insert(num.chiffres.begin(), carry);
     return num;
-} 
- 
-Entier operator*(const Entier &a, const Entier &b){
+}
 
-int power(int base, int exposant)
+// multiply big int by n
+Entier mult1Chiffre(Entier a, int n)
 {
-    int power = 1;
-    for (int i = 0; i < exposant; i++)
+    Entier num;
+    int carry = 0;
+    int i = a.chiffres.size() - 1;
+    int produit = 1;
+    while (i >= 0)
     {
-        power *= base;
-    }
-    return power;
-}
+        int chiffre_a = (i >= 0) ? a.chiffres[i] : 0;
 
-    Entier mult1Chiffre(Entier num, int n){
-        int carry = 0;
-        
-    while(i >=0){
-        int chiffre_a = (i>=0) ? a.chiffres[i] : 0 ;
-
-        produit = (a.chiffres[i] * n ) + carry;
+        produit = (a.chiffres[i] * n) + carry;
+        carry = produit / 10;
         num.chiffres.insert(num.chiffres.begin(), produit % 10);
+        i--;
     }
-    Entier multParDix(Entier num, int n){
-        
-    }
-    }
-
+    if (carry != 0)
+        num.chiffres.insert(num.chiffres.begin(), carry);
+    return num;
 }
 
+// multiply big int by 10^n
+
+Entier mult10(Entier a, int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        a.chiffres.push_back(0);
+    }
+    return a;
+}
+
+Entier operator*(const Entier &a, const Entier &b)
+{
+
+    int i = a.chiffres.size() - 1;
+    int j = b.chiffres.size() - 1;
+    Entier num;
+    Entier c;
+    Entier d;
+    int n = 0;
+
+    while (j >= 0)
+    {
+        d = mult1Chiffre(a, b.chiffres[j]);
+        Entier temp = mult10(d, n);
+        c = temp;
+        num = num + c;
+        n++;
+        j--;
+    }
+    return num;
+}
+
+Entier Entier::factoriel(){
+    Entier num("1");
+    Entier temp("1");
+    Entier one("1");
+
+    for (Entier i("2"); i <= *this ; i = i+one){
+        num = num * i;
+        /* num = num + (temp * (temp + one));
+        temp = temp + one; */
+    }
+    return num;
+}
