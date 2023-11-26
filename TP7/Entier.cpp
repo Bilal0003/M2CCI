@@ -10,17 +10,21 @@ Entier::Entier(std::string nombre) : chiffres()
 
     for (int i = 0; i < nombre.size(); i++)
     {
-        cout << nombre[i];
+        //cout << nombre[i];
         if (nombre[i] != ' ')
         {
             chiffres.push_back(nombre[i] - '0');
         }
     }
-    cout << endl;
+    //cout << endl;
     // if (chiffres.empty()) chiffres.push_back(0);
 }
 
 Entier::Entier() : chiffres() {}
+
+Entier::Entier(int a)
+{
+}
 
 void Entier::Afficher() const
 {
@@ -91,8 +95,6 @@ Entier mult10(Entier a, int n)
 
 Entier operator*(const Entier &a, const Entier &b)
 {
-
-    int i = a.chiffres.size() - 1;
     int j = b.chiffres.size() - 1;
     Entier num;
     Entier c;
@@ -102,8 +104,7 @@ Entier operator*(const Entier &a, const Entier &b)
     while (j >= 0)
     {
         d = mult1Chiffre(a, b.chiffres[j]);
-        Entier temp = mult10(d, n);
-        c = temp;
+        c = mult10(d, n);
         num = num + c;
         n++;
         j--;
@@ -111,15 +112,43 @@ Entier operator*(const Entier &a, const Entier &b)
     return num;
 }
 
-Entier Entier::factoriel(){
+Entier Entier::factoriel()
+{
     Entier num("1");
     Entier temp("1");
     Entier one("1");
 
-    for (Entier i("2"); i <= *this ; i = i+one){
+    for (Entier i("1"); i <= *this + one; i = i + one)
+    {
         num = num * i;
-        /* num = num + (temp * (temp + one));
-        temp = temp + one; */
     }
+
     return num;
 }
+
+ bool operator<=(const Entier &a, const Entier &b)
+{
+    if (a.chiffres.size() < b.chiffres.size())
+    {
+        return true;
+    }
+    else if (a.chiffres.size() > b.chiffres.size())
+    {
+        return false;
+    }
+
+    else
+    {
+        for (int i = 0; i < a.chiffres.size()  ; i++)
+        {
+            if (a.chiffres[i] < b.chiffres[i])
+            {
+                return true;
+            }
+            else if (a.chiffres[i] > b.chiffres [i]){
+                return false;
+            }
+        }
+    }
+} 
+

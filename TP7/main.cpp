@@ -4,15 +4,17 @@
 using namespace std;
 
 
-
-
 int main(){
-    string lrg1 = "6";
-    string lrg2 =  "2";
-    Entier grd1(lrg1);
-    Entier grd2(lrg2);
+    string num1 = "1";
+    string num2 = "4";
 
-    grd1.factoriel();
-    grd1.Afficher();
+    Entier bignum1(num1);
+    Entier bignum2(num2);
+
+    Entier nbr("27");
+
+    nbr.factoriel().Afficher();
+
+    
     return 0;
 }

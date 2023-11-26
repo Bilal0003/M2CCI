@@ -8,6 +8,7 @@ private:
 
 public:
     Entier();
+    Entier(int);
     Entier(std::string);
     //Entier(int);
     void Afficher() const;
@@ -16,4 +17,5 @@ public:
     friend Entier mult1Chiffre( Entier,int);
     friend Entier mult10(Entier,int);
     Entier factoriel();
+    friend bool operator <=(const Entier &, const Entier &);
 };
