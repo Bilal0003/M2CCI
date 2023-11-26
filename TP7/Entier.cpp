@@ -3,21 +3,19 @@
 
 using namespace std;
 
-// grandnombre = "10 888 869 450 418 352 160 768 000 000"
-
 Entier::Entier(std::string nombre) : chiffres()
 {
 
     for (int i = 0; i < nombre.size(); i++)
     {
-        //cout << nombre[i];
+        // cout << nombre[i];
         if (nombre[i] != ' ')
         {
             chiffres.push_back(nombre[i] - '0');
         }
     }
-    //cout << endl;
-    // if (chiffres.empty()) chiffres.push_back(0);
+    // cout << endl;
+    //  if (chiffres.empty()) chiffres.push_back(0);
 }
 
 Entier::Entier() : chiffres() {}
@@ -31,6 +29,8 @@ void Entier::Afficher() const
     for (int i = 0; i < chiffres.size(); i++)
     {
         cout << chiffres[i];
+        if ((chiffres.size() - i - 1) % 3 == 0 && chiffres.size() >= 6)
+            cout << " ";
     }
     cout << std::endl;
 }
@@ -126,7 +126,7 @@ Entier Entier::factoriel()
     return num;
 }
 
- bool operator<=(const Entier &a, const Entier &b)
+bool operator<=(const Entier &a, const Entier &b)
 {
     if (a.chiffres.size() < b.chiffres.size())
     {
@@ -139,16 +139,21 @@ Entier Entier::factoriel()
 
     else
     {
-        for (int i = 0; i < a.chiffres.size()  ; i++)
+        for (int i = 0; i < a.chiffres.size(); i++)
         {
             if (a.chiffres[i] < b.chiffres[i])
             {
                 return true;
             }
-            else if (a.chiffres[i] > b.chiffres [i]){
+            else if (a.chiffres[i] > b.chiffres[i])
+            {
                 return false;
             }
         }
     }
-} 
+}
 
+
+ostream& operator<<(ostream &f, const Entier &a){
+    f << a.chiffres << endl;
+}

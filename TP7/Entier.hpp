@@ -18,4 +18,5 @@ public:
     friend Entier mult10(Entier,int);
     Entier factoriel();
     friend bool operator <=(const Entier &, const Entier &);
+    friend std::ostream & operator<<( std::ostream&, const Entier &);
 };

@@ -18,19 +18,45 @@ void rationnel::Aff(){
     else {
         cout << n << "/" << d << endl;}}
 
-rationnel rationnel::Add(rationnel a){
-    if(d==a.d){
-    return rationnel(a.n+n,d);   
+
+rationnel operator+( rationnel a, rationnel b){
+    return rationnel(a.n*b.d + a.d*b.d, a.d* b.d);
 }
+
+rationnel operator*(rationnel a, rationnel b){
+    return rationnel( a.n * b.n, a.d * b.d);
+}
+
+rationnel rationnel::Multiplication(rationnel a) {
+    return rationnel( a.n *n, a.d * d );
+}
+
+
+void rationnel::Inverse(){
+    int t;
+    t = n;
+    n = d;
+    d = t;
+}
+
+
+rationnel rationnel::Add(rationnel a){
+ 
     return rationnel(n*a.d+d*a.n, d*a.d);}
 
-rationnel Soustracion(rationnel a,rationnel b) { return rationnel(b.d*a.n-b.n*a.d, b.d*a.d );}
+
+rationnel Soustracion(rationnel a,rationnel b) 
+{ return rationnel(b.d*a.n-b.n*a.d, b.d*a.d );}
+
+rationnel rationnel::Sous_Membre( rationnel a){
+    return rationnel ((n*a.d)-(a.n*d),d* a.d);
+}
 
 rationnel Multip(rationnel a,rationnel b){return rationnel(a.n*b.n, a.d*b.d);}
 
-rationnel operator+ (const rationnel &a, const rationnel &b){
+/* rationnel operator+ (const rationnel &a, const rationnel &b){
     return rationnel(b.n*a.d+b.d*a.n, b.d*a.d);
-}
+} */
 
 void rationnel::Inv(){int c; c=n; n=d; d=c;}
 
