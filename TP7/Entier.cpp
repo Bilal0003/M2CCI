@@ -154,6 +154,6 @@ bool operator<=(const Entier &a, const Entier &b)
 }
 
 
-ostream& operator<<(ostream &f, const Entier &a){
+/* ostream& operator<<(ostream &f, const Entier &a){
     f << a.chiffres << endl;
-}
+} */

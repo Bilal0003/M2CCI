@@ -12,7 +12,7 @@ int main(){
     Entier bignum2(num2);
 
     Entier nbr("27");
-    cout << nbr;
+    //cout << nbr;
     nbr.factoriel().Afficher();
 
     
