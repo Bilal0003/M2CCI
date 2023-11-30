@@ -81,10 +81,12 @@ void UE::Affiche(){
 
 float UE::Moyenne(){
     float moy = 0;
+    int sum_pond = 0;
     for (int i=0; i<V.size();i++){
-        moy += V[i].note;
+        moy += V[i].note * V[i].pondé;
+        sum_pond += V[i].pondé;
     }
-    return (moy/V.size());
+    return (moy/sum_pond);
 }
 
 bool UE::Valide(){
@@ -131,7 +133,7 @@ int main(){
     Progra.Ajoute(N3);
     Progra.Ajoute(N4);
     Progra.Ajoute(N5);
-    //Progra.Bilan();
+    Progra.Bilan();
     Progra.Change(2,17);
     Progra.Bilan();
     return 0;

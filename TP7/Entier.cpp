@@ -3,6 +3,7 @@
 
 using namespace std;
 
+//Constructeur 
 Entier::Entier(std::string nombre) : chiffres()
 {
 
@@ -23,6 +24,8 @@ Entier::Entier() : chiffres() {}
 Entier::Entier(int a)
 {
 }
+
+// Afficher un Entier
 
 void Entier::Afficher() const
 {
@@ -115,10 +118,9 @@ Entier operator*(const Entier &a, const Entier &b)
 Entier Entier::factoriel()
 {
     Entier num("1");
-    Entier temp("1");
     Entier one("1");
 
-    for (Entier i("1"); i <= *this + one; i = i + one)
+    for (Entier i("1"); i <= *this + one ; i = i + one)
     {
         num = num * i;
     }

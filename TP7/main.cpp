@@ -5,7 +5,7 @@ using namespace std;
 
 
 int main(){
-    string num1 = "1";
+    string num1 = "9999";
     string num2 = "4";
 
     Entier bignum1(num1);
