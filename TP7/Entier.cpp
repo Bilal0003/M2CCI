@@ -3,7 +3,7 @@
 
 using namespace std;
 
-//Constructeur 
+// Constructeur
 Entier::Entier(std::string nombre) : chiffres()
 {
 
@@ -120,7 +120,7 @@ Entier Entier::factoriel()
     Entier num("1");
     Entier one("1");
 
-    for (Entier i("1"); i <= *this + one ; i = i + one)
+    for (Entier i("1"); i <= *this + one; i = i + one)
     {
         num = num * i;
     }
@@ -155,7 +155,14 @@ bool operator<=(const Entier &a, const Entier &b)
     }
 }
 
-
-/* ostream& operator<<(ostream &f, const Entier &a){
-    f << a.chiffres << endl;
-} */
+ostream &operator<<(ostream &f, const Entier &a)
+{
+    for (int i = 0; i < a.chiffres.size(); i++)
+    {
+        f << a.chiffres[i];
+        if ((a.chiffres.size() - i - 1) % 3 == 0 && a.chiffres.size() >= 6)
+            f << " ";
+    }
+    f << endl;
+    return f;
+}
