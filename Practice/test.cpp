@@ -1,60 +1,40 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
 using namespace std;
 
-class List{
-    protected:
-        //List *pt;
-        int info;
-        List *suiv;
-    public:
-        friend void affiche(List*);
-        List();
-        void remplir_list(List*,int);
-        ~List();
-    
-};
-
-List::List():info(0) , suiv(nullptr){}
 
 
-void List::remplir_list(List* pt,int val){
-    List* courant;
-    
-    if (pt==nullptr){
-        pt = new List;
-        pt->info=val;
-        pt->suiv=nullptr;
-    }
-    else{
-        courant = pt;
-        while(courant->suiv != nullptr){
-            courant = courant->suiv;
+   
+string reverseWords(string s) {
+    string ans;
+    string word;
+    vector<string> words;
+    for(int i =0 ; i < s.size(); i++){
+        while(s[i]!= ' ' && i != s.size() ){
+            
+            word += s[i];
+            i++;
         }
-        courant->suiv = new List;
-        courant->suiv->info = val;
-        courant->suiv->suiv = nullptr;
+        if(!word.empty()) words.push_back(word);
+        word ="";
+        
     }
+
+    for(int j = words.size() -1 ; j >=0; j--){
+        ans += words[j];
+        if (j!=0) ans+= " "; 
+    }
+    return ans;
 }
 
-void affiche(List* pt){
-    while(pt!=nullptr){
-        cout << pt->info << " ";
-        pt = pt->suiv;
-    }
-}
 
-List::~List(){delete suiv;}
 
-int main(){
-    List* Mylist=nullptr;
-    Mylist = new List;
-    Mylist->remplir_list(Mylist,5);
-    Mylist->remplir_list(Mylist,12);
-    Mylist->remplir_list(Mylist,9);
-    Mylist->remplir_list(Mylist,13);
-
-    affiche(Mylist);
+int main() {
+    string s = " asdasd df f";
+    cout << reverseWords(s);
+    
+  
     return 0;
 }

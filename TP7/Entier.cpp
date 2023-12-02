@@ -3,7 +3,8 @@
 
 using namespace std;
 
-// Constructeur
+// Constructeur partir d'un string
+
 Entier::Entier(std::string nombre) : chiffres()
 {
 
@@ -19,11 +20,9 @@ Entier::Entier(std::string nombre) : chiffres()
     //  if (chiffres.empty()) chiffres.push_back(0);
 }
 
-Entier::Entier() : chiffres() {}
+// Constructeur a partir d'un entier
 
-Entier::Entier(int a)
-{
-}
+Entier::Entier(int a) : chiffres() {}
 
 // Afficher un Entier
 
@@ -37,6 +36,8 @@ void Entier::Afficher() const
     }
     cout << std::endl;
 }
+
+//Surcharge de l'operateur d'addition
 
 Entier operator+(const Entier &a, const Entier &b)
 {
@@ -64,7 +65,8 @@ Entier operator+(const Entier &a, const Entier &b)
     return num;
 }
 
-// multiply big int by n
+// multiplier un entier par un chiffre n
+
 Entier mult1Chiffre(Entier a, int n)
 {
     Entier num;
@@ -85,7 +87,7 @@ Entier mult1Chiffre(Entier a, int n)
     return num;
 }
 
-// multiply big int by 10^n
+// multiplier un entier par 10^n
 
 Entier mult10(Entier a, int n)
 {
@@ -95,6 +97,8 @@ Entier mult10(Entier a, int n)
     }
     return a;
 }
+
+//surcharge de l'operateur de multiplication
 
 Entier operator*(const Entier &a, const Entier &b)
 {
@@ -115,6 +119,8 @@ Entier operator*(const Entier &a, const Entier &b)
     return num;
 }
 
+//Calculer factoriel d'un entier
+
 Entier Entier::factoriel()
 {
     Entier num("1");
@@ -127,6 +133,9 @@ Entier Entier::factoriel()
 
     return num;
 }
+
+
+//Surcharge de l'operateur de comparaison <= :
 
 bool operator<=(const Entier &a, const Entier &b)
 {
@@ -154,6 +163,8 @@ bool operator<=(const Entier &a, const Entier &b)
         }
     }
 }
+
+//Surchare de l'operateur de flot
 
 ostream &operator<<(ostream &f, const Entier &a)
 {
