@@ -3,8 +3,13 @@
 
 using namespace std;
 
-// Constructeur partir d'un string
+/*!
+\brief Constructeur partir d'un string.
 
+Voila.
+
+\param nombre Le nombre sous la forme d'une chaine.
+*/
 Entier::Entier(std::string nombre) : chiffres()
 {
 
@@ -22,7 +27,7 @@ Entier::Entier(std::string nombre) : chiffres()
 
 // Constructeur a partir d'un entier
 
-Entier::Entier(int a) : chiffres() {}
+Entier::Entier() : chiffres() {}
 
 // Afficher un Entier
 
@@ -37,7 +42,11 @@ void Entier::Afficher() const
     cout << std::endl;
 }
 
-//Surcharge de l'operateur d'addition
+/*!
+\brief Surcharge de l'operateur d'addition.
+\param a,b Les entiers.
+\return La somme.
+*/
 
 Entier operator+(const Entier &a, const Entier &b)
 {
@@ -65,7 +74,11 @@ Entier operator+(const Entier &a, const Entier &b)
     return num;
 }
 
-// multiplier un entier par un chiffre n
+/*!
+\brief Fonction utilitaire de multiplication d'un Entier par un int a un seule chiffre .
+\param a un Entier, n un int.
+\return un Entier multiplier par un int.
+*/
 
 Entier mult1Chiffre(Entier a, int n)
 {
@@ -87,7 +100,11 @@ Entier mult1Chiffre(Entier a, int n)
     return num;
 }
 
-// multiplier un entier par 10^n
+/*!
+\brief Fonctipn utilitaire de multiplication d'un Entier par un 10^n .
+\param un Entier a, un entier n.
+\return un Entier multiplier par 10^n.
+*/
 
 Entier mult10(Entier a, int n)
 {
@@ -98,7 +115,11 @@ Entier mult10(Entier a, int n)
     return a;
 }
 
-//surcharge de l'operateur de multiplication
+/*!
+\brief Surcharge de l'operateur d'addition.
+\param a,b Les entiers.
+\return Le produit.
+*/
 
 Entier operator*(const Entier &a, const Entier &b)
 {
@@ -119,7 +140,10 @@ Entier operator*(const Entier &a, const Entier &b)
     return num;
 }
 
-//Calculer factoriel d'un entier
+/*!
+\brief Fonction factoriel.
+\return La factoriel.
+*/
 
 Entier Entier::factoriel()
 {
@@ -134,8 +158,11 @@ Entier Entier::factoriel()
     return num;
 }
 
-
-//Surcharge de l'operateur de comparaison <= :
+/*!
+\brief Surcharge de l'operateur de comparaison inferieur ou egale.
+\param a,b Les entiers.
+\return Booléen.
+*/
 
 bool operator<=(const Entier &a, const Entier &b)
 {
@@ -164,7 +191,11 @@ bool operator<=(const Entier &a, const Entier &b)
     }
 }
 
-//Surchare de l'operateur de flot
+/*!
+\brief Surcharge de l'operateur de flot.
+\param ostream et un Entier.
+\return Affichage d'un Entierq.
+*/
 
 ostream &operator<<(ostream &f, const Entier &a)
 {

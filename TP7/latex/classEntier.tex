@@ -1,44 +1,177 @@
 \hypertarget{classEntier}{}\doxysection{Entier Class Reference}
 \label{classEntier}\index{Entier@{Entier}}
+
+
+Class permetant représenter de très grands nombres entiers sous leur forme décimale.  
+
+
+
+
+{\ttfamily \#include $<$Entier.\+hpp$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classEntier_a713ab45dc080fa6316a88b98cddc6fcb}\label{classEntier_a713ab45dc080fa6316a88b98cddc6fcb}} 
-{\bfseries Entier} (int)
-\item 
-\mbox{\Hypertarget{classEntier_a264f6187c2e29432e3566bddb0436e25}\label{classEntier_a264f6187c2e29432e3566bddb0436e25}} 
-{\bfseries Entier} (std\+::string)
-\item 
+\mbox{\hyperlink{classEntier_a264f6187c2e29432e3566bddb0436e25}{Entier}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Constructeur partir d\textquotesingle{}un string. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classEntier_a81bee02fc848675fe31b4a0fe8441787}\label{classEntier_a81bee02fc848675fe31b4a0fe8441787}} 
 void {\bfseries Afficher} () const
 \item 
-\mbox{\Hypertarget{classEntier_a34df520bf8bc888947031ee01bc998d1}\label{classEntier_a34df520bf8bc888947031ee01bc998d1}} 
-\mbox{\hyperlink{classEntier}{Entier}} {\bfseries factoriel} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classEntier}{Entier}} \mbox{\hyperlink{classEntier_a34df520bf8bc888947031ee01bc998d1}{factoriel}} ()
+\begin{DoxyCompactList}\small\item\em Fonction factoriel. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classEntier_a1aa4f512002a70536b34b69e68d937a1}\label{classEntier_a1aa4f512002a70536b34b69e68d937a1}} 
-\mbox{\hyperlink{classEntier}{Entier}} {\bfseries operator+} (const \mbox{\hyperlink{classEntier}{Entier}} \&, const \mbox{\hyperlink{classEntier}{Entier}} \&)
-\item 
-\mbox{\Hypertarget{classEntier_ac365670a11a77705eca0d9bdb1933221}\label{classEntier_ac365670a11a77705eca0d9bdb1933221}} 
-\mbox{\hyperlink{classEntier}{Entier}} {\bfseries operator$\ast$} (const \mbox{\hyperlink{classEntier}{Entier}} \&, const \mbox{\hyperlink{classEntier}{Entier}} \&)
-\item 
-\mbox{\Hypertarget{classEntier_a0e055de508120d56ed8552fdc309f4a4}\label{classEntier_a0e055de508120d56ed8552fdc309f4a4}} 
-\mbox{\hyperlink{classEntier}{Entier}} {\bfseries mult1\+Chiffre} (\mbox{\hyperlink{classEntier}{Entier}}, int)
-\item 
-\mbox{\Hypertarget{classEntier_ab1b73bb90bb37ef8e94bd3ff0d6503f6}\label{classEntier_ab1b73bb90bb37ef8e94bd3ff0d6503f6}} 
-\mbox{\hyperlink{classEntier}{Entier}} {\bfseries mult10} (\mbox{\hyperlink{classEntier}{Entier}}, int)
-\item 
-\mbox{\Hypertarget{classEntier_aba7d6b815f9391cce86bf8c0e8c7b286}\label{classEntier_aba7d6b815f9391cce86bf8c0e8c7b286}} 
-bool {\bfseries operator$<$=} (const \mbox{\hyperlink{classEntier}{Entier}} \&, const \mbox{\hyperlink{classEntier}{Entier}} \&)
-\item 
+\mbox{\hyperlink{classEntier}{Entier}} \mbox{\hyperlink{classEntier_a1aa4f512002a70536b34b69e68d937a1}{operator+}} (const \mbox{\hyperlink{classEntier}{Entier}} \&, const \mbox{\hyperlink{classEntier}{Entier}} \&)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}operateur d\textquotesingle{}addition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntier}{Entier}} \mbox{\hyperlink{classEntier_ac365670a11a77705eca0d9bdb1933221}{operator$\ast$}} (const \mbox{\hyperlink{classEntier}{Entier}} \&, const \mbox{\hyperlink{classEntier}{Entier}} \&)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}operateur d\textquotesingle{}addition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntier}{Entier}} \mbox{\hyperlink{classEntier_a0e055de508120d56ed8552fdc309f4a4}{mult1\+Chiffre}} (\mbox{\hyperlink{classEntier}{Entier}}, int)
+\begin{DoxyCompactList}\small\item\em Fonction utilitaire de multiplication d\textquotesingle{}un \mbox{\hyperlink{classEntier}{Entier}} par un int a un seule chiffre . \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntier}{Entier}} \mbox{\hyperlink{classEntier_ab1b73bb90bb37ef8e94bd3ff0d6503f6}{mult10}} (\mbox{\hyperlink{classEntier}{Entier}}, int)
+\begin{DoxyCompactList}\small\item\em Fonctipn utilitaire de multiplication d\textquotesingle{}un \mbox{\hyperlink{classEntier}{Entier}} par un 10$^\wedge$n . \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEntier_aba7d6b815f9391cce86bf8c0e8c7b286}{operator$<$=}} (const \mbox{\hyperlink{classEntier}{Entier}} \&, const \mbox{\hyperlink{classEntier}{Entier}} \&)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}operateur de comparaison inferieur ou egale. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classEntier_a7f84fcaf4090eca1efbc8985ee385cde}\label{classEntier_a7f84fcaf4090eca1efbc8985ee385cde}} 
 std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \mbox{\hyperlink{classEntier}{Entier}} \&)
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Class permetant représenter de très grands nombres entiers sous leur forme décimale. 
+
+A more detailed description of the class goes here. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEntier_a264f6187c2e29432e3566bddb0436e25}\label{classEntier_a264f6187c2e29432e3566bddb0436e25}} 
+\index{Entier@{Entier}!Entier@{Entier}}
+\index{Entier@{Entier}!Entier@{Entier}}
+\doxysubsubsection{\texorpdfstring{Entier()}{Entier()}}
+{\footnotesize\ttfamily Entier\+::\+Entier (\begin{DoxyParamCaption}\item[{std\+::string}]{nombre }\end{DoxyParamCaption})}
+
+
+
+Constructeur partir d\textquotesingle{}un string. 
+
+Voila.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre} & Le nombre sous la forme d\textquotesingle{}une chaine. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEntier_a34df520bf8bc888947031ee01bc998d1}\label{classEntier_a34df520bf8bc888947031ee01bc998d1}} 
+\index{Entier@{Entier}!factoriel@{factoriel}}
+\index{factoriel@{factoriel}!Entier@{Entier}}
+\doxysubsubsection{\texorpdfstring{factoriel()}{factoriel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEntier}{Entier}} Entier\+::factoriel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction factoriel. 
+
+\begin{DoxyReturn}{Returns}
+La factoriel. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classEntier_ab1b73bb90bb37ef8e94bd3ff0d6503f6}\label{classEntier_ab1b73bb90bb37ef8e94bd3ff0d6503f6}} 
+\index{Entier@{Entier}!mult10@{mult10}}
+\index{mult10@{mult10}!Entier@{Entier}}
+\doxysubsubsection{\texorpdfstring{mult10}{mult10}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEntier}{Entier}} mult10 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEntier}{Entier}}}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Fonctipn utilitaire de multiplication d\textquotesingle{}un \mbox{\hyperlink{classEntier}{Entier}} par un 10$^\wedge$n . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em un} & \mbox{\hyperlink{classEntier}{Entier}} a, un entier n. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un \mbox{\hyperlink{classEntier}{Entier}} multiplier par 10$^\wedge$n. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntier_a0e055de508120d56ed8552fdc309f4a4}\label{classEntier_a0e055de508120d56ed8552fdc309f4a4}} 
+\index{Entier@{Entier}!mult1Chiffre@{mult1Chiffre}}
+\index{mult1Chiffre@{mult1Chiffre}!Entier@{Entier}}
+\doxysubsubsection{\texorpdfstring{mult1Chiffre}{mult1Chiffre}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEntier}{Entier}} mult1\+Chiffre (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEntier}{Entier}}}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Fonction utilitaire de multiplication d\textquotesingle{}un \mbox{\hyperlink{classEntier}{Entier}} par un int a un seule chiffre . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & un \mbox{\hyperlink{classEntier}{Entier}}, n un int. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un \mbox{\hyperlink{classEntier}{Entier}} multiplier par un int. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntier_ac365670a11a77705eca0d9bdb1933221}\label{classEntier_ac365670a11a77705eca0d9bdb1933221}} 
+\index{Entier@{Entier}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Entier@{Entier}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEntier}{Entier}} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEntier}{Entier}} \&}]{a,  }\item[{const \mbox{\hyperlink{classEntier}{Entier}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Surcharge de l\textquotesingle{}operateur d\textquotesingle{}addition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b} & Les entiers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le produit. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntier_a1aa4f512002a70536b34b69e68d937a1}\label{classEntier_a1aa4f512002a70536b34b69e68d937a1}} 
+\index{Entier@{Entier}!operator+@{operator+}}
+\index{operator+@{operator+}!Entier@{Entier}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEntier}{Entier}} operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEntier}{Entier}} \&}]{a,  }\item[{const \mbox{\hyperlink{classEntier}{Entier}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Surcharge de l\textquotesingle{}operateur d\textquotesingle{}addition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b} & Les entiers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La somme. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntier_aba7d6b815f9391cce86bf8c0e8c7b286}\label{classEntier_aba7d6b815f9391cce86bf8c0e8c7b286}} 
+\index{Entier@{Entier}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Entier@{Entier}}
+\doxysubsubsection{\texorpdfstring{operator$<$=}{operator<=}}
+{\footnotesize\ttfamily bool operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEntier}{Entier}} \&}]{a,  }\item[{const \mbox{\hyperlink{classEntier}{Entier}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Surcharge de l\textquotesingle{}operateur de comparaison inferieur ou egale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b} & Les entiers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Booléen. 
+\end{DoxyReturn}
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Entier.\+hpp\item 
+\mbox{\hyperlink{Entier_8hpp}{Entier.\+hpp}}\item 
 Entier.\+cpp\end{DoxyCompactItemize}

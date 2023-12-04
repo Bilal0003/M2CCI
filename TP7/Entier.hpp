@@ -1,35 +1,27 @@
 #include <vector>
 #include <string>
+
 /**
  * \file Entier.hpp
  * \brief Class tres grand nombres
  */
 
+/*!
+  \class Entier Entier.hpp
+  \brief Class permetant représenter de très grands nombres entiers sous leur forme décimale
 
-
-/**
- * \class MyClass
- * \brief Class permetant représenter de très grands nombres entiers sous leur forme décimale
- *
- * A more detailed description of the class goes here.
+ A more detailed description of the class goes here.
  */
-
 
 class Entier
 {
 private:
-    std::vector<int> chiffres;
+    std::vector<int> chiffres; //!< Tableau de chiffres
 
 public:
-    /**
-     * \brief constructor vide.
-     */
-    Entier();
-     /**
-     * \brief constructeurs avec parametres.
-     * \param a An integer parameter.
-     */
-    Entier(int);
+
+    Entier();     
+    //Entier(int);
     Entier(std::string);
     
     void Afficher() const;

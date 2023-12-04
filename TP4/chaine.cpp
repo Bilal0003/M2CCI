@@ -7,11 +7,11 @@ using namespace std;
 
 
 bool isPalindrome(string a){
-    int m = a.size() / 2;
+    int m = a.size() ;
     
     for (int i=0; i < m ;i++){
         
-        if (a[i] != a[ i + m + 1]){
+        if (a[i] != a[ m - 1 - i]){
             return false;
         }
 
@@ -135,6 +135,7 @@ vector<int> Compte(string a, int n){
 }
 
 int main(){ 
-    cout << '5' - '0';
+    string x = "pogop";
+    cout << isPalindrome(x);
     return 0;
 }

@@ -1,0 +1,21 @@
+\hypertarget{Entier_8hpp}{}\doxysection{Entier.\+hpp File Reference}
+\label{Entier_8hpp}\index{Entier.hpp@{Entier.hpp}}
+
+
+Class tres grand nombres.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for Entier.\+hpp\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classEntier}{Entier}}
+\begin{DoxyCompactList}\small\item\em Class permetant représenter de très grands nombres entiers sous leur forme décimale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class tres grand nombres. 
+
