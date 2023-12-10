@@ -7,7 +7,7 @@ using namespace std;
 int main(){
     
     Entier nbr("27");
-    cout<< nbr.factoriel();
+    cout << nbr.factoriel();
     
 
     return 0;

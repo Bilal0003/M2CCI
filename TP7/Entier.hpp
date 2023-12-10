@@ -8,7 +8,7 @@
 
 /*!
   \class Entier Entier.hpp
-  \brief Class permetant représenter de très grands nombres entiers sous leur forme décimale
+  \brief Class permetant de représenter de très grands nombres entiers sous leur forme décimale
 
  A more detailed description of the class goes here.
  */
@@ -17,7 +17,7 @@ class Entier
 {
 private:
     std::vector<int> chiffres; //!< Tableau de chiffres
-
+    
 public:
 
     Entier();     
